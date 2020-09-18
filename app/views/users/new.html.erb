@@ -1,0 +1,16 @@
+<!-- HTML form - no rails helpers -->
+<form action="/users" method="post" accept-charset="UTF-8">
+
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username">
+
+    <label for="email">email:</label>
+    <input type="text" name="email" id="email">
+
+    <label for="password">password:</label>
+    <input type="password" name="password" id="password">
+
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+    <input type="submit" value="Submit This Form">
+</form>
