@@ -14,3 +14,19 @@
 
     <input type="submit" value="Submit This Form">
 </form>
+
+
+<!-- Railsy Form pt 1 -->
+
+<%= form_with(url: "/users", method: "post") do %>
+  <%= label_tag(:username, "Username:") %>
+  <%= text_field(:user, :username) %>
+
+  <%= label_tag(:email, "email:") %>
+  <%= text_field(:user, :email) %>
+
+  <%= label_tag(:password, "password:") %>
+  <%= password_field(:user, :password) %>
+
+  <%= submit_tag("Submit This Form") %>
+<% end %>
